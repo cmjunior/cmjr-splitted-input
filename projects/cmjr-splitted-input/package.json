@@ -1,6 +1,13 @@
 {
   "name": "cmjr-splitted-input",
+  "author": "Celso Marigo Junior",
   "version": "0.0.1",
+  "keywords": ["otp", "splitted input"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cmjunior/cmjr-splitted-input"
+  },
   "peerDependencies": {
     "@angular/common": "^9.1.9",
     "@angular/core": "^9.1.9"
