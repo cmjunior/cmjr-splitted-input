@@ -1,27 +1,42 @@
-# CmjrSplitedInput
+## CMJr - Splitted Input
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
+Este componente, também conhecido como *One Time Password* divide um input em pequenos quadros, informando ao usuário de forma mais clara e intuitiva o numero de dígitos de um campo.
 
-## Development server
+# DEMO
+Como ficou o componente
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+`type='text'`
+![Exemplo de uso, input type text](demo/text-demo.gif)
 
-## Code scaffolding
+`type='password'`
+![Exemplo de uso, input type password](demo/password-demo.gif)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Uso
 
-## Build
+1. Instale o pacote:
+`   npm i cmjr-splitted-input`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+2. Importe o módulo no seu AppModule ou SharedModule
 
-## Running unit tests
+`
+    import { CmjrSplittedInputModule } from 'cmjr-splitted-input';
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    @NgModule({
+        imports: [
+            ...
+            CmjrSplittedInputModule
+        ],
+        ...
+    })
+    export class AppModule
+`
 
-## Running end-to-end tests
+3. Adicione o componente no seu template HTML
+`   <app-digits-input [(ngModel)]="senha" [digits]="4" type="text"></app-digits-input>`
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Ou
+`   <app-digits-input formControlName="senha" [digits]="4" type="password"></app-digits-input>`
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Opções
+Configure o numero de dígitos e o tipo de dígitos, *text* ou *password*
+O valor só pe retornado via property binding ou para o controle do formulário quando todos os dígitos são informados.
