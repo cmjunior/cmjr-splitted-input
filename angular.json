@@ -7,7 +7,7 @@
       "projectType": "library",
       "root": "projects/cmjr-splitted-input",
       "sourceRoot": "projects/cmjr-splitted-input/src",
-      "prefix": "lib",
+      "prefix": "cmjr",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",

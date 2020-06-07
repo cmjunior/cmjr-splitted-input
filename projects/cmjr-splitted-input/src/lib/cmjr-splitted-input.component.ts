@@ -5,7 +5,7 @@ import { FieldModel } from './cmjr-splitted-input.model';
 import { CustomRenderer } from './custom.renderer';
 
 @Component({
-  selector: 'lib-cmjr-splitted-input',
+  selector: 'cmjr-splitted-input',
   template: `
     <form *ngIf="form" [formGroup]="form"
       class="digit-group"
