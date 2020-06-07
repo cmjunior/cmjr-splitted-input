@@ -14,7 +14,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "cmjr-splitted-input": [
+        "dist/cmjr-splitted-input/cmjr-splitted-input",
+        "dist/cmjr-splitted-input"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

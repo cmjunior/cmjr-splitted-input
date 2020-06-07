@@ -1,0 +1,29 @@
+$BaseBG: #e7e7e7;
+
+.digit-group {
+	input {
+		width: 30px;
+		height: 50px;
+		background-color: lighten($BaseBG, 5%);
+		border: none;
+		line-height: 50px;
+		text-align: center;
+		font-size: 24px;
+		font-weight: 200;
+		color: black;
+        margin: 0 2px;
+        box-shadow: inset 0 0px 2px 0 rgba(0, 0, 0, 0.4);
+	}
+
+	.splitter {
+		padding: 0 5px;
+		color: black;
+		font-size: 24px;
+	}
+}
+
+.prompt {
+	margin-bottom: 20px;
+	font-size: 20px;
+	color: black;
+}

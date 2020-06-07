@@ -2,5 +2,46 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "cmjr-splitted-input": {
+      "projectType": "library",
+      "root": "projects/cmjr-splitted-input",
+      "sourceRoot": "projects/cmjr-splitted-input/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/cmjr-splitted-input/tsconfig.lib.json",
+            "project": "projects/cmjr-splitted-input/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/cmjr-splitted-input/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/cmjr-splitted-input/src/test.ts",
+            "tsConfig": "projects/cmjr-splitted-input/tsconfig.spec.json",
+            "karmaConfig": "projects/cmjr-splitted-input/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/cmjr-splitted-input/tsconfig.lib.json",
+              "projects/cmjr-splitted-input/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }},
+  "defaultProject": "cmjr-splitted-input"
 }
