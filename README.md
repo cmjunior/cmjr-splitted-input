@@ -1,6 +1,6 @@
 # CMJr - Splitted Input
 
-Este componente, também conhecido como *One Time Password* divide um input em pequenos quadros, informando ao usuário de forma mais clara e intuitiva o numero de dígitos de um campo.
+Uma simples implementação do componente, também conhecido como *One Time Password* divide um input em pequenos quadros, informando ao usuário de forma mais clara e intuitiva o numero de dígitos de um campo.
 
 ## DEMO
 Como ficou o componente
@@ -18,16 +18,16 @@ Como ficou o componente
 
 2. Importe o módulo no seu AppModule ou SharedModule\
 `
-    import { CmjrSplittedInputModule } from 'cmjr-splitted-input';
-
-    @NgModule({
-        imports: [
-            ...
-            CmjrSplittedInputModule
-        ],
-        ...
-    })
-    export class AppModule
+    import { CmjrSplittedInputModule } from 'cmjr-splitted-input';\
+\
+    @NgModule({\
+        imports: [\
+            ...\
+            CmjrSplittedInputModule\
+        ],\
+        ...\
+    })\
+    export class AppModule\
 `
 
 3. Adicione o componente no seu template HTML:\
@@ -38,5 +38,5 @@ Ou
 `   <app-digits-input formControlName="senha" [digits]="4" type="password"></app-digits-input>`\
 
 ## Opções
-Configure o numero de dígitos e o tipo de dígitos, *text* ou *password*;
-O valor só pe retornado via property binding ou para o controle do formulário quando todos os dígitos são informados.
+Configure o numero de dígitos e o tipo de dígitos, *text* ou *password*;\
+O valor só será retornado via property binding ou para o controle do formulário quando todos os dígitos são informados.
